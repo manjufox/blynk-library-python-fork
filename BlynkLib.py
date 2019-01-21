@@ -104,7 +104,7 @@ class BlynkProtocol:
             data = b''
             dlen = args[0]
         else:
-            data = ('\0'.join(map(str, args))).encode('ascii')
+            data = ('\0'.join(map(str, args))).encode('utf-8')
             dlen = len(data)
         
         self.log('<', cmd, id, '|', *args)
